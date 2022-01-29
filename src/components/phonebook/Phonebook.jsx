@@ -26,7 +26,7 @@ export const Phonebook = () => {
   };
 
   return (
-    <Container title="Phonebookcccccc">
+    <Container title="Phonebook">
       <Section>
         <ContactForm onAddContact={addContactSubmit} />
       </Section>
