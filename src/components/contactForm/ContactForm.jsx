@@ -5,7 +5,7 @@ import s from './ContactForm.module.css';
 
 import { ContactInputs } from 'components/contactInputs';
 
-export const ContactForm = ({ onSubmitContact }) => {
+export const ContactForm = ({ onAddContact }) => {
   const [inputName, setInputName] = useState('');
   const [inputNumber, setInputNumber] = useState('');
   const [agreed, setAgreed] = useState(false);
@@ -29,7 +29,7 @@ export const ContactForm = ({ onSubmitContact }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    onSubmitContact({ id: nanoid(), inputName, inputNumber, agreed });
+    onAddContact({ id: nanoid(), inputName, inputNumber, agreed });
     resetForm();
   };
 
@@ -65,5 +65,5 @@ export const ContactForm = ({ onSubmitContact }) => {
 };
 
 ContactForm.propTypes = {
-  onSubmitContact: PropTypes.func.isRequired,
+  onAddContact: PropTypes.func.isRequired,
 };
